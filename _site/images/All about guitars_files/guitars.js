@@ -37,6 +37,9 @@ if ( window.location.pathname == '/' ){
     });
 }
 
+
+
+
 /*-----------FIND YOUR FIT----------*/
 
 

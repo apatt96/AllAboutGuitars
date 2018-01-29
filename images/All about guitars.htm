@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://localhost:4000/types/index.html -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>All about guitars</title>
+   <link href="./All about guitars_files/css" rel="stylesheet">
+   <link href="./All about guitars_files/css(1)" rel="stylesheet">
+    <link href="./All about guitars_files/reset.css" rel="stylesheet" type="text/css">
+    <link href="./All about guitars_files/main.css" rel="stylesheet" type="text/css">
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+ <body style="" cz-shortcut-listen="true">
+    
+     <header class="header" style="display: block;">
+    <ul class="header-nav" "nav-links"="">
+        <li><a href="http://localhost:4000/">HOME</a></li>
+<li class="dropdown">
+    <span id="link3" class="drop-trigger"><a href="http://localhost:4000/types/index.html">TYPES</a></span>
+  <ul class="drop-menu" style="display: none;">
+      <li><a href="http://localhost:4000/references/electric.html">Electric</a></li>
+      <li><a href="http://localhost:4000/references/acoustic.html">Acoustic</a></li>
+      <li><a href="http://localhost:4000/references/hollowbody.html">Hollow-body</a></li>
+      <li><a href="http://localhost:4000/references/classical.html">Classical</a></li>
+  </ul>
+</li>
+<li><a href="http://localhost:4000/form/index.html">FIND YOUR FIT</a></li>
+
+    </ul>
+</header>
+    
+     <div class="content-container">
+        <div class="types_container">
+    <div class="types">
+        <div class="t1">
+           <a href="http://localhost:4000/references/electric.html"><h2>Electric</h2></a>
+            <img src="./All about guitars_files/GibsonLesPaulTypes.jpg" alt="picture of an electric guitar">
+        </div>
+        <div class="t2">
+            <img src="./All about guitars_files/AcousticTypes.jpg" alt="picture of an acoustic guitar">
+            <a href="http://localhost:4000/references/acoustic.html"><h2>Acoustic</h2></a>
+        </div>
+        <div class="t3">
+            <img src="./All about guitars_files/HollowBodyTypes.jpg" alt="picture of a hollowbody electric guitar">
+            <a href="http://localhost:4000/references/hollowbody.html"><h2>Hollowbody</h2></a>
+        </div>
+        <div class="t4">
+            <img src="./All about guitars_files/ClassicalTypes.jpg" alt="picture of a classical guitar">
+            <a href="http://localhost:4000/references/classical.html"><h2>Classical</h2></a>
+        </div>
+        <!-- images placed inside block elements to deal with a Firefox rendering bug affecting  scaled flexbox images -->
+    </div>
+</div>
+     </div>
+     
+     <footer class="footer">
+    <div>
+        <form name="email_form" action="http://localhost:4000/action_page.php" onsubmit="return validateForm();" method="post" _lpchecked="1">
+            <span>Be sure to sign up for our newsletter: </span> <input type="text" name="email" placeholder="youremail@mail.com">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var x = document.forms["email_form"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("Not a valid e-mail address");
+                return false;
+            }
+        }
+
+    </script>
+</footer>
+
+   
+   <script src="./All about guitars_files/jquery.min.js"></script>
+    <script src="./All about guitars_files/guitars.js"></script>
+  
+</body></html>

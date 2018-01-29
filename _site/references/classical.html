@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+	<title>All about guitars</title>
+   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css"/>
+    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+</head>
+ <body>
+    
+     <header class="header">
+    <ul class="header-nav" "nav-links">
+        <li><a href="/">HOME</a></li>
+<li class="dropdown">
+    <span id="link3" class="drop-trigger"><a href="/types/index.html">TYPES</a></span>
+  <ul class="drop-menu">
+      <li><a href="../references/electric.html">Electric</a></li>
+      <li><a href="../references/acoustic.html">Acoustic</a></li>
+      <li><a href="../references/hollowbody.html">Hollow-body</a></li>
+      <li><a href="../references/classical.html">Classical</a></li>
+  </ul>
+</li>
+<li><a href="/form/index.html">FIND YOUR FIT</a></li>
+
+    </ul>
+</header>
+    
+     <div class="content-container">
+        <div class="references_container">
+ 
+    <h1>The Classical guitar</h1>
+  
+   <img src="../images/ClassicalReferences.jpg">
+   
+    <p>The classical guitar (also known as concert guitar, classical acoustic, nylon-string guitar, or Spanish guitar) is the member of the guitar family used in classical music. It is an acoustical wooden guitar with strings made of nylon, rather than the metal strings used in acoustic and electric guitars. The traditional classical guitar has twelve frets clear of the body and is held on the left leg, so that the hand that plucks or strums the strings does so near the back of the soundhole (this is called the classical position). The modern steel string guitar, on the other hand, usually has fourteen frets clear of the body (see Dreadnought) and is commonly played off the hip.</p>
+
+    <p>The phrase "classical guitar" may refer to either of two concepts other than the instrument itself:</p>
+
+    <ul>
+        <li>
+            the instrumental finger technique common to classical guitar—individual strings plucked with the fingernails or, rarely, fingertips.
+        </li>
+        <li>
+            the instrument's classical music repertoir
+        </li>
+    </ul>
+    <p>The term <em>modern classical guitar</em> is sometimes used to distinguish the classical guitar from older forms of guitar, which are in their broadest sense also called <em>classical</em>, or more specifically, <em>early guitars</em>. Examples of early guitars include the six-string early romantic guitar (c. 1790–1880), and the earlier baroque guitars with five courses.</p>
+
+    <p>The materials and the methods of classical guitar construction may vary, but the typical shape is either <em>modern classical guitar</em> or that <em>historic classical guitar</em> similar to the early romantic guitars of France and Italy. Classical guitar strings once made of gut are now made of such polymers as nylon, with fine silver wire wound about the acoustically lower (bass side) strings.</p>
+
+    <p>A guitar family tree may be identified. The flamenco guitar derives from the modern classical, but has differences in material, construction and sound.</p>
+    
+    <p>Today's <em>modern classical guitar</em> was established by the late designs of the 19th-century Spanish luthier, Antonio Torres Jurado.</p>
+</div>
+     </div>
+     
+     <footer class="footer">
+    <div>
+        <form name="email_form" action="/action_page.php" onsubmit="return validateForm();" method="post">
+            <span>Be sure to sign up for our newsletter: </span> <input type="text" name="email" placeholder="youremail@mail.com">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            var x = document.forms["email_form"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("Not a valid e-mail address");
+                return false;
+            }
+        }
+
+    </script>
+</footer>
+
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+    <script src="../js/guitars.js"></script>
+  </body>
+</html>

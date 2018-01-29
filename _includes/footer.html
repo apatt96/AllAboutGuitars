@@ -1,5 +1,20 @@
 <footer class="footer">
     <div>
-        
+        <form name="email_form" action="/action_page.php" onsubmit="return validateForm();" method="post">
+            <span>Be sure to sign up for our newsletter: </span> <input type="text" name="email" placeholder="youremail@mail.com">
+            <input type="submit" value="Submit">
+        </form>
     </div>
+    <script>
+        function validateForm() {
+            var x = document.forms["email_form"]["email"].value;
+            var atpos = x.indexOf("@");
+            var dotpos = x.lastIndexOf(".");
+            if (atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= x.length) {
+                alert("Not a valid e-mail address");
+                return false;
+            }
+        }
+
+    </script>
 </footer>
