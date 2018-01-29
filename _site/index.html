@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en-us">
     <head>
-	<title>All about guitars</title>
-   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" rel="stylesheet">
-   <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
-    <link href="../css/reset.css" rel="stylesheet" type="text/css"/>
-    <link href="../css/main.css" rel="stylesheet" type="text/css"/>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>All about guitars</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="https://use.fontawesome.com/260b635df3.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
+
  <body>
     
      <header class="header">
-    <ul class="header-nav" "nav-links">
-        <li><a href="/">HOME</a></li>
+    <nav>
+        <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+        <label for="mobile-menu" class="show-mobile-menu"><h3>Menu</h3></label>
+        <ul class="header-nav" "nav-links">
+            <li><a href="/">HOME</a></li>
 <li class="dropdown">
     <span id="link3" class="drop-trigger"><a href="/types/index.html">TYPES</a></span>
   <ul class="drop-menu">
@@ -23,10 +28,12 @@
       <li><a href="../references/classical.html">Classical</a></li>
   </ul>
 </li>
-<li><a href="/form/index.html">FIND YOUR FIT</a></li>
+<li><a href="../findyourfit/index.html">FIND YOUR FIT</a></li>
 
-    </ul>
+        </ul>
+    </nav>
 </header>
+
     
      <div class="content-container">
         <div class="home">
@@ -47,6 +54,9 @@
      
      <footer class="footer">
     <div>
+       <a href="" class="social-link">
+            <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
         <form name="email_form" action="/action_page.php" onsubmit="return validateForm();" method="post">
             <span>Be sure to sign up for our newsletter: </span> <input type="text" name="email" placeholder="youremail@mail.com">
             <input type="submit" value="Submit">
@@ -61,6 +71,10 @@
                 alert("Not a valid e-mail address");
                 return false;
             }
+            else {
+                alert("Thank you for signing up!");
+                return true;
+            }
         }
 
     </script>
@@ -70,5 +84,6 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
      <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="../js/guitars.js"></script>
+     <script src="../js/findyourfit.js"></script>
   </body>
 </html>
