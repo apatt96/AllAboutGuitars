@@ -1,8 +1,54 @@
+--- 
+layout: default 
+title: Find your fit 
 ---
-layout: default
-title: Find your fit
----
-<div class="fyf_container">
-    <div class="loader"></div>
 
+<div class="fyf_container">
+
+    <form id="quiz" name="quiz">
+       
+       <!-- QUESTIONS -->
+        <div class="question1 question">
+            <h3>How old are you?</h3>
+            <input type="text" id="age"><br>
+            <button type="button" class="subButton"  onclick="qFunction0()">Submit</button>
+        </div>
+
+        <div class="question2 question">
+            <h3>What's your experience level?</h3>
+            <select id="experience" name="experience" size="3">
+                <option>Beginner (just starting out)</option>
+                <option>Intermediate (3+ years)</option>
+                <option>Advanced (10+ years)</option>
+            </select>
+            <br>
+            <input type="button" class="subButton" value="Submit" onclick="qFunction1()">
+        </div>
+
+        <div class="question3 question">
+            <h3> What type of music do you listen to?</h3>
+            <select id="music" name="music" size="5">
+                <option>Rock and Roll</option>
+                <option>Country</option>
+                <option>Metal</option>
+                <option>Soft Rock</option>
+                <option>Classical</option>
+            </select>
+            <br>
+            <input type="button" class="subButton" value="Submit" onclick="qFunction2()">
+        </div>
+
+        <div class="question4 question">
+            <h3> What's your budget?</h3>
+            <select id="budget" name="budget" size="3">
+                <option>Below $300</option>
+                <option>$300 - $1000</option>
+                <option>Above $1000</option>
+            </select>
+            <br>
+            <input type="button" class="subButton" value="Submit" onclick="qFunction3()">
+        </div>
+
+        
+    </form>
 </div>

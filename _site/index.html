@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
-    <head>
+
+<head>
     <title>All about guitars</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,14 +13,15 @@
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
- <body>
-    
-     <header class="header">
+
+<body>
+
+    <header class="header">
     <nav>
         <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
         <label for="mobile-menu" class="show-mobile-menu"><h3>Menu</h3></label>
-        <ul class="header-nav" "nav-links">
-            <li><a href="/">HOME</a></li>
+        <ul class="header-nav nav-links">
+            <li><a href="/" id="scroller">HOME</a></li>
 <li class="dropdown">
     <span id="link3" class="drop-trigger"><a href="/types/index.html">TYPES</a></span>
   <ul class="drop-menu">
@@ -34,8 +37,8 @@
     </nav>
 </header>
 
-    
-     <div class="content-container">
+
+    <div class="content-container">
         <div class="home">
     <div class="full-hero hero-home">
         <div class="hero-content">
@@ -46,22 +49,21 @@
     <div class="home-callout">
         <p>So why even learn Guitar? It was certainly something I never really considered growing up. I wasn't the guy who was naturally inclined to explore tons of different hobbies. I started to impress a girl in my high school band class who was captivated upon seeing one of my fellow trumpet players pick up a guitar and play a beautiful tune. Back then, being the shy, secluded kid that I was, I thought this was my shot.</p>
         
-        <p> Five years later I still play, but for different reasons. Over this time I have been blessed with such a rewarding experience from playing guitar, and I would recommend anyone to pick one up and give it a go. The purpose of this blog is to help you find whats right for you as a beginner specifically. Starting out can be frustrating, intimidating, and expensive. Feel free to take our <a href="./form/index.html">"Find Your Fit"</a> questionaire, and I can match you with what I feel would be the best guitar style for you to pick up. Or, if you're feeling extra interested and studious, check out <a href="/types/index.html">our page on the types</a> of guitars available where the most popular styles of guitars are explained in further detail. 
+        <p> Five years later I still play, but for different reasons. Over this time I have been blessed with such a rewarding experience from playing guitar, and I would recommend anyone to pick one up and give it a go. The purpose of this blog is to help you find whats right for you, especially if you're new. Starting out can be frustrating, intimidating, and expensive. Feel free to take our <a href="./findyourfit/index.html">"Find Your Fit"</a> questionaire, and I can match you with what I feel would be the best guitar style for you to pick up. Or, if you're feeling extra interested and studious, check out <a href="/types/index.html">our page on the types</a> of guitars available where the most popular styles of guitars are explained in further detail. 
         </p>
     </div>
 </div>
-     </div>
-     
-     <footer class="footer">
-    <div>
-       <a href="" class="social-link">
+    </div>
+
+    <footer class="footer">
+       <a href="https://github.com/apatt96" class="social-link" target="_blank">
             <i class="fa fa-github" aria-hidden="true"></i>
         </a>
         <form name="email_form" action="/action_page.php" onsubmit="return validateForm();" method="post">
-            <span>Be sure to sign up for our newsletter: </span> <input type="text" name="email" placeholder="youremail@mail.com">
+            <h3>Be sure to sign up for the <span>newsletter:</span></h3>
+            <input type="text" name="email" placeholder="youremail@mail.com">
             <input type="submit" value="Submit">
         </form>
-    </div>
     <script>
         function validateForm() {
             var x = document.forms["email_form"]["email"].value;
@@ -80,10 +82,11 @@
     </script>
 </footer>
 
-   
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="../js/guitars.js"></script>
-     <script src="../js/findyourfit.js"></script>
-  </body>
+    <script src="../js/findyourfit.js"></script>
+</body>
+
 </html>

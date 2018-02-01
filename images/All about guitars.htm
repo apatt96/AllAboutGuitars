@@ -1,60 +1,102 @@
 <!DOCTYPE html>
-<!-- saved from url=(0038)http://localhost:4000/types/index.html -->
-<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>All about guitars</title>
-   <link href="./All about guitars_files/css" rel="stylesheet">
-   <link href="./All about guitars_files/css(1)" rel="stylesheet">
+<!-- saved from url=(0044)http://localhost:4000/findyourfit/index.html -->
+<html lang="en-us" class="fa-events-icons-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>All about guitars</title>
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="./All about guitars_files/260b635df3.js"></script><link href="./All about guitars_files/260b635df3.css" media="all" rel="stylesheet">
+    <link href="./All about guitars_files/css" rel="stylesheet">
+    <link href="./All about guitars_files/css(1)" rel="stylesheet">
     <link href="./All about guitars_files/reset.css" rel="stylesheet" type="text/css">
     <link href="./All about guitars_files/main.css" rel="stylesheet" type="text/css">
-	
-	<meta name="viewport" content="width=device-width,initial-scale=1">
 </head>
- <body style="" cz-shortcut-listen="true">
-    
-     <header class="header" style="display: block;">
-    <ul class="header-nav" "nav-links"="">
-        <li><a href="http://localhost:4000/">HOME</a></li>
+
+
+<body>
+
+    <header class="header">
+    <nav>
+        <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
+        <label for="mobile-menu" class="show-mobile-menu"><h3>Menu</h3></label>
+        <ul class="header-nav" "nav-links"="">
+            <li><a href="http://localhost:4000/">HOME</a></li>
 <li class="dropdown">
     <span id="link3" class="drop-trigger"><a href="http://localhost:4000/types/index.html">TYPES</a></span>
-  <ul class="drop-menu" style="display: none;">
+  <ul class="drop-menu">
       <li><a href="http://localhost:4000/references/electric.html">Electric</a></li>
       <li><a href="http://localhost:4000/references/acoustic.html">Acoustic</a></li>
       <li><a href="http://localhost:4000/references/hollowbody.html">Hollow-body</a></li>
       <li><a href="http://localhost:4000/references/classical.html">Classical</a></li>
   </ul>
 </li>
-<li><a href="http://localhost:4000/form/index.html">FIND YOUR FIT</a></li>
+<li><a href="http://localhost:4000/findyourfit/index.html">FIND YOUR FIT</a></li>
 
-    </ul>
+        </ul>
+    </nav>
 </header>
-    
-     <div class="content-container">
-        <div class="types_container">
-    <div class="types">
-        <div class="t1">
-           <a href="http://localhost:4000/references/electric.html"><h2>Electric</h2></a>
-            <img src="./All about guitars_files/GibsonLesPaulTypes.jpg" alt="picture of an electric guitar">
+
+
+    <div class="content-container">
+        <div class="fyf_container">
+
+    <form id="quiz" name="quiz">
+      
+        <div class="firstTwo" style="perspective: 200px; position: relative; transform-style: preserve-3d;">
+           
+           <!-- QUESTIONS -->
+            <div class="question1 front question" style="backface-visibility: hidden; transform-style: preserve-3d; position: absolute; z-index: 1; height: 100%; width: 100%; transition: all 0.5s ease-out;">
+                <h3 style="backface-visibility: hidden;">What is your age?</h3><br style="backface-visibility: hidden;">
+                <input id="age" style="backface-visibility: hidden;"><br style="backface-visibility: hidden;">
+                <button type="button" class="subButton" onclick="qFunction0()" style="backface-visibility: hidden;">Submit</button>
+            </div>
+           
+            <div class="question2 back question" style="backface-visibility: hidden; transform-style: preserve-3d; position: relative; z-index: 0; height: 100%; width: 100%; transform: rotateX(-180deg); transition: all 0.5s ease-out;">
+                <h3 style="backface-visibility: hidden;">Whats your experience level?</h3><br style="backface-visibility: hidden;">
+                <select id="experience" name="experience" size="3" style="backface-visibility: hidden;">
+                    <option style="backface-visibility: hidden;">Beginner (just starting out)</option>
+                    <option style="backface-visibility: hidden;">Intermediate (3+ years)</option>
+                    <option style="backface-visibility: hidden;">Advanced (10+ years)</option>
+                </select>
+                <br style="backface-visibility: hidden;"><br style="backface-visibility: hidden;">
+                <input type="button" class="subButton" value="Submit" onclick="qFunction1()" style="backface-visibility: hidden;">
+            </div>
+           
+           <!--
+            <div class="question3 question">
+                <h3> What type of music do you listen to?</h3><br>
+                <select id="music" name="music" size="3">
+                    <option>Rock and Roll</option>
+                    <option>Country</option>
+                    <option>Metal</option>
+                    <option>Soft Rock</option>
+                    <option>Classical</option>
+                </select>
+                <input type="button" class="subButton" value="Submit" onclick="qFunction2()">
+            </div>
+            
+            <div class="question4 question">
+                <h3> What's your budget?</h3><br>
+                    <select id="budget" name="budget" size="3">
+                        <option>Below $300</option>
+                        <option>$300 - $1000</option>
+                        <option>Above $1000</option>
+                    </select>
+                <input type="button" class="subButton" value="Submit" onclick="qFunction3()">
+            </div>
+            -->
         </div>
-        <div class="t2">
-            <img src="./All about guitars_files/AcousticTypes.jpg" alt="picture of an acoustic guitar">
-            <a href="http://localhost:4000/references/acoustic.html"><h2>Acoustic</h2></a>
-        </div>
-        <div class="t3">
-            <img src="./All about guitars_files/HollowBodyTypes.jpg" alt="picture of a hollowbody electric guitar">
-            <a href="http://localhost:4000/references/hollowbody.html"><h2>Hollowbody</h2></a>
-        </div>
-        <div class="t4">
-            <img src="./All about guitars_files/ClassicalTypes.jpg" alt="picture of a classical guitar">
-            <a href="http://localhost:4000/references/classical.html"><h2>Classical</h2></a>
-        </div>
-        <!-- images placed inside block elements to deal with a Firefox rendering bug affecting  scaled flexbox images -->
-    </div>
+        
+    </form>
 </div>
-     </div>
-     
-     <footer class="footer">
+
+    </div>
+
+    <footer class="footer">
     <div>
-        <form name="email_form" action="http://localhost:4000/action_page.php" onsubmit="return validateForm();" method="post" _lpchecked="1">
+       <a href="https://github.com/apatt96" class="social-link" target="_blank">
+            <i class="fa fa-github" aria-hidden="true"></i>
+        </a>
+        <form name="email_form" action="http://localhost:4000/action_page.php" onsubmit="return validateForm();" method="post">
             <span>Be sure to sign up for our newsletter: </span> <input type="text" name="email" placeholder="youremail@mail.com">
             <input type="submit" value="Submit">
         </form>
@@ -68,13 +110,21 @@
                 alert("Not a valid e-mail address");
                 return false;
             }
+            else {
+                alert("Thank you for signing up!");
+                return true;
+            }
         }
 
     </script>
 </footer>
 
-   
-   <script src="./All about guitars_files/jquery.min.js"></script>
+
+    <script src="./All about guitars_files/jquery.min.js"></script>
+    <script src="./All about guitars_files/jquery.flip.min.js"></script>
     <script src="./All about guitars_files/guitars.js"></script>
-  
+    <script src="./All about guitars_files/findyourfit.js"></script>
+
+
+
 </body></html>

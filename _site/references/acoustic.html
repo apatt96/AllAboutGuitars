@@ -1,6 +1,8 @@
 <!DOCTYPE html>
+
 <html lang="en-us">
-    <head>
+
+<head>
     <title>All about guitars</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,14 +13,15 @@
     <link href="../css/main.css" rel="stylesheet" type="text/css" />
 </head>
 
- <body>
-    
-     <header class="header">
+
+<body>
+
+    <header class="header">
     <nav>
         <input type="checkbox" id="mobile-menu" class="mobile-menu-check">
         <label for="mobile-menu" class="show-mobile-menu"><h3>Menu</h3></label>
-        <ul class="header-nav" "nav-links">
-            <li><a href="/">HOME</a></li>
+        <ul class="header-nav nav-links">
+            <li><a href="/" id="scroller">HOME</a></li>
 <li class="dropdown">
     <span id="link3" class="drop-trigger"><a href="/types/index.html">TYPES</a></span>
   <ul class="drop-menu">
@@ -34,8 +37,8 @@
     </nav>
 </header>
 
-    
-     <div class="content-container">
+
+    <div class="content-container">
         <div class="references_container">
  
     <h1>The Acoustic Guitar</h1>
@@ -46,18 +49,17 @@
 
     <p>The main source of sound in an acoustic guitar is the string, which is plucked or strummed with the finger or with a pick. The string vibrates at a necessary frequency and also creates many harmonics at various different frequencies. The frequencies produced can depend on string length, mass, and tension. The string causes the soundboard and sound box to vibrate, and as these have their own resonances at certain frequencies, they amplify some string harmonics more strongly than others, hence affecting the timbre produced by the instrument.</p>
 </div>
-     </div>
-     
-     <footer class="footer">
-    <div>
-       <a href="" class="social-link">
+    </div>
+
+    <footer class="footer">
+       <a href="https://github.com/apatt96" class="social-link" target="_blank">
             <i class="fa fa-github" aria-hidden="true"></i>
         </a>
         <form name="email_form" action="/action_page.php" onsubmit="return validateForm();" method="post">
-            <span>Be sure to sign up for our newsletter: </span> <input type="text" name="email" placeholder="youremail@mail.com">
+            <h3>Be sure to sign up for the <span>newsletter:</span></h3>
+            <input type="text" name="email" placeholder="youremail@mail.com">
             <input type="submit" value="Submit">
         </form>
-    </div>
     <script>
         function validateForm() {
             var x = document.forms["email_form"]["email"].value;
@@ -76,10 +78,11 @@
     </script>
 </footer>
 
-   
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <script src="../js/guitars.js"></script>
-     <script src="../js/findyourfit.js"></script>
-  </body>
+    <script src="../js/findyourfit.js"></script>
+</body>
+
 </html>

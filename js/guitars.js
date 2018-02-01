@@ -32,14 +32,10 @@ if ($(window).width() > 800) {
         $(".header").show();
     }
 }
-//else if $(window).resize(function() {
-
- //});
-
 
 /*Smooth Scroll*/
 if ( window.location.pathname == '/' ){
-    $(".header-nav li:first-child a").click(function () {
+    $("#scroller").click(function () {
         $("html, body").animate({
             scrollTop: 0
         }, "slow");

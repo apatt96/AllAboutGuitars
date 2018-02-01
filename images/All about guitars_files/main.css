@@ -44,17 +44,18 @@ h1, h2, h3, h4, h5, h6 {
 /*-------HEADER STYLES--------*/
 
 .header {
-    height: 10vh;
-    display: none;
+    min-height: 10vh;
+    display: block;
     background-color: black;
     position: fixed;
     width: 100%;
     z-index: 20;
 }
 .header-nav {
+    font-size: 3vh;
     float: right;
     list-style: none;
-    padding: 1em 2em;
+    padding: 3.5vh; 2em;
 }
 .header-nav > li {
     display: inline-block;  
@@ -68,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #fff;
     font-family: 'Raleway', sans-serif;
     text-decoration: none;
+    transition: color 0.25s;
 }
 .header-nav a:hover {
     color: red;
@@ -104,8 +106,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: rgba(0,0,0,0.1);
     color: #333;
 }
-
-
+.mobile-menu-check, .show-mobile-menu {
+    display: none;
+}
 
 /*-------FULL HERO------*/
 
@@ -133,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     animation: bounce 2s;
 }
 .hero-home {
-    background-image: url(/images/home-guitar.jpg);
+    background-image: url(/images/FULLHERO.jpg);
     background-size: cover;
     background-position: center-top; 
 }
@@ -154,19 +157,9 @@ h1, h2, h3, h4, h5, h6 {
     margin: auto;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
     padding: 1em;
-    margin-top: 10vh;
+    margin: 10vh auto;
     font-size: 24px;
     font-weight: 300;
-}
-
-/*-------FOOTER STYLES-------*/
-
-.footer {
-    background-color: #000;
-    color: #fff;
-}
-.footer div {
-    height: 10vh;
 }
 
 /*---------TYPES STYLES-------*/
@@ -187,10 +180,10 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
 }
 .types div {
-    -ms-flex: auto;
     flex: auto;
-    width: 50vw;
+    flex: auto;
     margin: 0.5vw;
+    width: 50vw;   
 }
 .types div img {
     width: 100%;
@@ -202,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     color: black;
 }
-.t1 h2:hover ~ img, .t2 img:hover, .t3 img:hover, .t4 img:hover,  {
+.t1 a:hover + img, .t2 a:hover + img, .t3 a:hover + img, .t4 a:hover + img {
     opacity: 0.8;
 }
 .t1 h2, .t2 h2, .t3 h2, .t4 h2 {
@@ -213,71 +206,192 @@ h1, h2, h3, h4, h5, h6 {
     left: 50%;
     color: #fff;
     transform: translate(-50%, -50%);
+    transition: font-size 0.5s ease;
 }
-@media screen and (max-width: 400px) {
-  .types div { margin: 0; }
-  .types { padding: 0; }
-  
+.t1 h2:hover, .t2 h2:hover, .t3 h2:hover, .t4 h2:hover {
+    font-size: 2.2em;
+    
 }
 
-/*-----------FORM STYLES--------*/
+/*-----------FIND YOUR FIT STYLES--------*/
 
-.form_full_container {
+.fyf_container {
     background-color: #000;
     width: 100%;
+    color: #fff;
+}
+.fyf_container form {
+    background-color: blue;
+    height: 100%;
+}
+.firstTwo {
+    display: inline-block;
+    position: absolute;
+    width: 600px;
+    height: 100px;
+    background-color: red;
+    text-align: center;
+    margin: auto;
+}
+.firstTwo .question {
+    width: 700px;
+    height: 200px;
+    background-color: yellow;
+    padding-top: 20px;
+    z-index: 9;
 }
 
-.loader {
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid #3498db;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 0.5s linear infinite;
-    /* Safari */
-    animation: spin 0.3s linear 3;
-    position: absolute; 
-    top: 50%;
-    left: 50%;
+
+/*------------REFERENCES STYLES---------*/
+
+.references_container {
+    background-color: black;
+    padding: 2em;
+}
+.references_container img {
+    float: right;
+    height: auto;
+    max-width: 300px;
+    margin: 1em;
+}
+.references_container h1 {
     color: #fff;
-    transform: translate(-50%, -50%);
+    font-size: 4em;
+    display: inline-block;
+    clear: both;
+}
+.references_container p {
+    color: #fff;
+    text-indent: 2rem;
+}
+.references_container ul {
+    color: #fff;
+    line-height: 1.5;
+    margin: 0.75em 2em;   
 }
 
 /*------------FOOTER STYLES----------*/
 
-footer div {
+footer {
+    background-color: #000;
+    color: #fff;
+    min-height: 10vh;
+}
+footer div {  
     margin: auto;
     text-align: center;
     position: relative;
-    padding: 1rem;
+    padding: 3vh 2em;
 }
 footer div form {
     position: absolute;
     font-family: 'Raleway', sans-serif;
     right: 1em;
 }
-
 footer div form[placeholder] {
     color: #333;
     font-family: 'Raleway', sans-serif;
 }
-
-/* Safari */
-/*
-@-webkit-keyframes spin {
-    0% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(360deg);
-    }
+footer a {
+    color: #fff;
+    position: absolute;
+    left: 1em;
+    margin: auto;
+    font-size: 5vh;
 }
-*/
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
+
+/*----------MEDIA QUERIES---------*/
+
+@media (max-width: 800px) {
+    /*GENERAL*/
+    h1 {
+        font-size: 15vw;
     }
-    100% {
-        transform: rotate(360deg);
+    /*HEADER STYLES*/
+    .header-nav {
+        padding: 2vh 1em 0 0;
+    }
+    .header-nav > li {
+        margin-left: 0.25em;
+    }
+    .header-nav > li ~ li {
+        padding-left: 0.25em;
+    }
+    .nav-links a {
+        font-size: 3.25vw;
+    }
+    .show-mobile-menu {
+        display: block;
+        float: right;
+        padding: 1.5em;
+        position: relative;
+        color: #fff;
+    }
+    .header-nav { 
+        background-color: #444;
+        box-sizing: border-box;
+        left: 0;
+        max-height: 0; 
+        overflow: hidden; 
+        padding: 0;
+        position: absolute;
+        text-align: center;
+        top: 10vh; 
+        transition: all 0.5s ease-in-out;
+        width: 100vw; 
+        z-index: 9;
+    }
+    .header-nav li {
+        display: block;
+        margin-top: 1.5em;
+    }
+    .header-nav li ~ li {
+        border: 0;
+        padding: 0;
+    }
+    .header-nav li:last-child {
+        margin-bottom: 1em;
+    }
+    .header-nav li:first-child a {
+        color: #fff;
+    }
+     /*HIDE DROPDOWN IN NAV MENU*/
+    .header-nav .dropdown:hover .drop-menu, .header-nav .drop-trigger:after {
+        display: none;
+    }
+    .header-nav .drop-trigger {
+        padding-right: 0;
+    }
+    .mobile-menu-check:checked ~ .header-nav {
+        /*height: 90vh; /*for full screen mobile menus*/
+        max-height: 90vh; /*displays the menu*/
+    }
+    .mobile-menu-check:checked ~ .show-mobile-menu:after {
+        background-color: #000;
+        color: #ed6e2f;
+        content: "X";
+        left: 0;
+        position: absolute;
+        top: 1.5em;
+        width: 100%;
+        text-align: center;
+    }
+    .home-callout {
+        width: 60%;
+    }
+    /*TYPES*/
+    .types h2 {
+        font-size: 15vw;
+    }
+    /*FOOTER*/
+    footer {
+       
+    }
+    footer div a {
+       font-size: 100%;
+    }
+    footer div form {
+        font-size: 100%;
+        line-height: 150%;
     }
 }
