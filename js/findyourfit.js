@@ -9,23 +9,30 @@ showDivs(slideIndex);
 /*SLIDESHOW*/
 
 function plusDivs(n) {
-  showDivs(slideIndex += n);
+    showDivs(slideIndex += n);
 }
 
 function currentDiv(n) {
-  showDivs(slideIndex = n);
+    showDivs(slideIndex = n);
 }
 function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("question");
-  var dots = document.getElementsByClassName("demo");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length}
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
- $(x[slideIndex-1]).hide();
-  $(x[slideIndex-1]).fadeIn("slow"); 
+    var i;
+    var x = document.getElementsByClassName("question");
+    if (n > x.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = x.length
+    }
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    x[slideIndex - 1].style.display = "block";
+    $(x[slideIndex - 1]).animate({opacity: '1'}, 700);
+    
+    /*$(":button").click(function(){
+       $(x[slideIndex - 1]).animate({opacity: '0'}, 700);
+    });*/
 }
 
 /*QUESTIONS*/
@@ -37,11 +44,10 @@ function qFunction0() {
     if (x < 30 || x > 60) {
         electric++;
         acoustic++;
-    } else if(isNaN(x)) {
-      alert("please enter a valid number");  
+    } else if (isNaN(x)) {
+        alert("please enter a valid age");
         plusDivs(-1);
-    } 
-    else {
+    } else {
         classical++;
         hollowbody++;
     }
@@ -50,7 +56,7 @@ function qFunction0() {
 function qFunction1() {
     plusDivs(1);
     var obj = document.getElementById("experience").selectedIndex;
-    switch(obj) {
+    switch (obj) {
         case 0:
             electric++;
             acoustic++;
@@ -64,14 +70,14 @@ function qFunction1() {
             hollowbody++;
             electric++;
             acoustic++;
-            break;  
+            break;
     }
 }
 
 function qFunction2() {
     plusDivs(1);
     var obj = document.getElementById("music").selectedIndex;
-    switch(obj) {
+    switch (obj) {
         case 0:
             electric++;
             hollowbody++
@@ -82,7 +88,7 @@ function qFunction2() {
             break;
         case 2:
             electric++;
-            break;  
+            break;
         case 3:
             acoustic++;
             hollowbody++;
@@ -93,44 +99,48 @@ function qFunction2() {
     }
 }
 
-function qFunction3(){
+function qFunction3() {
     plusDivs(1);
     var obj = document.getElementById("budget").selectedIndex;
-    switch(obj) {
+    switch (obj) {
         case 0:
+            electric++;
+            acoustic++;
+            break;
+        case 1:
             electric++;
             acoustic++;
             classical++;
             break;
-        case 1:
+        case 2:
             hollowbody++;
             electric++;
             acoustic++;
             break;
-        case 2:
-            electric++;
-            acoustic++;
-            break;  
     }
-    decision();   
+    decision();
 }
 
 function decision() {
     var options = [electric, acoustic, hollowbody, classical];
-    options.sort();
-    var conclusion = options[3];
-    alert(conclusion);
-    switch(conclusion) {
-        case 0:
-            //href..// conclusion page
+    var largest = 0;
+    for (var i = 1; i < options.length; i++) {
+        if (options[i] > options[largest]){
+            largest = i;
+        }
+    }
+    switch (largest) {
+        case 0: 
+            plusDivs(0);
             break;
         case 1:
-            
+            plusDivs(1);
             break;
         case 2:
-            
-            break;  
+            plusDivs(2);
+            break;
+        case 3:
+            plusDivs(3);
+            break;
     }
 }
-
-
