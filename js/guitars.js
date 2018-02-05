@@ -16,6 +16,7 @@ $(document).ready(function () {
 alert(window.location.pathname);
 
 //$(window).scroll(function() {
+alert($(window).width());
 if ($(window).width() > 800) {
     if ( window.location.pathname == '/AllAboutGuitars/index.html' || window.location.pathname == '/AllAboutGuitars/'){
         alert("yo");
