@@ -145,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate(-50%, 0);
 }
 .hero-home {
-    background-image: url(/images/FULLHERO.jpg);
+    background-image: url(/AllAboutGuitars/images/FULLHERO.jpg);
     background-size: cover;
     background-position: center-top; 
 }
