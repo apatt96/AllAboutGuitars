@@ -12,7 +12,7 @@ $(document).ready(function () {
 });
 
 /*HOME PAGE ANIMATIONS*/
-
+alert(window.location.pathname);
 //$(window).scroll(function() {
 if ($(window).width() > 800) {
     if ( window.location.pathname == '/' ){
