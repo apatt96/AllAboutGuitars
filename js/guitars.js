@@ -12,6 +12,7 @@ $(document).ready(function () {
 });
 
 /*HOME PAGE ANIMATIONS*/
+alert(window.location.pathname);
 //$(window).scroll(function() {
 if ($(window).width() > 800) {
         {% if page.url == "/index.html" %}
@@ -35,7 +36,7 @@ if ($(window).width() > 800) {
 }
 
 /*Smooth Scroll*/
-if ( window.location.pathname == "https://apatt96.github.io/AllAboutGuitars/index.html"){
+if ( window.location.pathname == "/index.html"){
     $("#scroller").click(function () {
         $("html, body").animate({
             scrollTop: 0

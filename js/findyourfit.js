@@ -30,9 +30,6 @@ function showDivs(n) {
     x[slideIndex - 1].style.display = "block";
     $(x[slideIndex - 1]).animate({opacity: '1'}, 700);
     
-    /*$(":button").click(function(){
-       $(x[slideIndex - 1]).animate({opacity: '0'}, 700);
-    });*/
 }
 
 /*QUESTIONS*/

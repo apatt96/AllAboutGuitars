@@ -471,7 +471,7 @@ footer input[type=submit] {
         margin-left: ;
     }
     .result {
-        overflow: scroll;
+        overflow-y: scroll;
         height: 40vh;
     }
 }
