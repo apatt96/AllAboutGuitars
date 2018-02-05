@@ -10,3 +10,4 @@ This is a sample website by Andrew Patterson. It demonstrates all of the functio
 
 Other site information:
 - all images saved in .jpg format
+- references pages from wikipedia
