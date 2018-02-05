@@ -12,10 +12,9 @@ $(document).ready(function () {
 });
 
 /*HOME PAGE ANIMATIONS*/
-alert(window.location.pathname);
 //$(window).scroll(function() {
 if ($(window).width() > 800) {
-    if ( window.location.pathname == "/AllAboutGuitars"){
+    if ( window.location.pathname == "/AllAboutGuitars/index.html"){
         $(".header").hide();
         var topofDiv = $(".hero-home").offset().top; 
         var height = $(".hero-home").outerHeight(); 
@@ -34,7 +33,7 @@ if ($(window).width() > 800) {
 }
 
 /*Smooth Scroll*/
-if ( window.location.pathname == "/AllAboutGuitars"){
+if ( window.location.pathname == "/AllAboutGuitars/index.html"){
     $("#scroller").click(function () {
         $("html, body").animate({
             scrollTop: 0
