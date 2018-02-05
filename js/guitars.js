@@ -14,7 +14,8 @@ $(document).ready(function () {
 /*HOME PAGE ANIMATIONS*/
 //$(window).scroll(function() {
 if ($(window).width() > 800) {
-    if ( window.location.pathname == "https://apatt96.github.io/AllAboutGuitars/index.html"){
+        {% if page.url == "/index.html" %}
+   // if ( window.location.pathname == "https://apatt96.github.io/AllAboutGuitars/index.html"){
         $(".header").hide();
         var topofDiv = $(".hero-home").offset().top; 
         var height = $(".hero-home").outerHeight(); 
@@ -26,7 +27,8 @@ if ($(window).width() > 800) {
                $(".header").hide();
             }
         });
-    }
+    //}
+    {% endif %}
     else {
         $(".header").show();
     }
