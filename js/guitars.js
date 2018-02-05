@@ -34,7 +34,7 @@ if ($(window).width() > 800) {
 }
 
 /*Smooth Scroll*/
-if ( window.location.pathname == '/' ){
+if ( window.location.pathname == '~/' ){
     $("#scroller").click(function () {
         $("html, body").animate({
             scrollTop: 0
