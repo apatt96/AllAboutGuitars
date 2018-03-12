@@ -16,10 +16,10 @@ $(document).ready(function () {
 
 //$(window).scroll(function() {
 if ($(window).width() > 800) {
-    if ( window.location.pathname == '/AllAboutGuitars/index.html' || window.location.pathname == '/AllAboutGuitars/'){
+    if ( window.location.pathname == '{{ "/index.html" | relative_url }}' || window.location.pathname == '{{ "/" | relative_url }}'){
         $(".header").hide();
-        var topofDiv = $(".hero-home").offset().top; 
-        var height = $(".hero-home").outerHeight(); 
+        var topofDiv = $(".hero-home").offset().top;
+        var height = $(".hero-home").outerHeight();
         $(window).scroll(function(){
             if($(window).scrollTop() > (topofDiv + height)){
                $(".header").fadeIn(250);
@@ -35,7 +35,7 @@ if ($(window).width() > 800) {
 }
 
 /*Smooth Scroll*/
-if ( window.location.pathname == '/AllAboutGuitars/index.html' || window.location.pathname == '/AllAboutGuitars/'){
+if ( window.location.pathname == '{{ "/index.html" | relative_url }}' || window.location.pathname == '{{ "/" | relative_url }}'){
     $("#scroller").click(function () {
         $("html, body").animate({
             scrollTop: 0
@@ -43,16 +43,3 @@ if ( window.location.pathname == '/AllAboutGuitars/index.html' || window.locatio
         return false;
     });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

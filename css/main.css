@@ -1,7 +1,7 @@
 /*-------GENERAL STYLES-------*/
 body {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     font-family: 'Open Sans', helvetica, arial, sans;
     min-height: 100vh;
 }
@@ -11,8 +11,8 @@ br {
 }
 .content-container {
     display: flex;
-    flex: 1 1 auto; 
-    padding-top: 10vh; 
+    flex: 1 1 auto;
+    padding-top: 10vh;
     width: 100%;
 }
 a {
@@ -61,10 +61,10 @@ h1, h2, h3, h4, h5, h6 {
     float: right;
     list-style: none;
     padding: 3.5vh;
-   
+
 }
 .header-nav > li {
-    display: inline-block;  
+    display: inline-block;
     margin-left: 1em;
 }
 .header-nav > li ~ li {
@@ -81,14 +81,14 @@ h1, h2, h3, h4, h5, h6 {
     color: red;
     cursor: pointer;
 }
-.header-nav li a:hover:after { 
-  width: 100%; 
+.header-nav li a:hover:after {
+  width: 100%;
 }
 
 /*DROPDOWN*/
 
 .dropdown {
-   position: relative; 
+   position: relative;
 }
 .drop-menu {
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.4);
@@ -145,9 +145,9 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate(-50%, 0);
 }
 .hero-home {
-    background-image: url(/AllAboutGuitars/images/FULLHERO.jpg);
+    background-image: url("../images/FULLHERO.jpg");
     background-size: cover;
-    background-position: center-top; 
+    background-position: center-top;
 }
 .hero-content {
     color: #fff;
@@ -192,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
     flex: auto;
     flex: auto;
     margin: 0.5vw;
-    width: 50vw;   
+    width: 50vw;
 }
 .types div img {
     width: 100%;
@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .t1 h2:hover, .t2 h2:hover, .t3 h2:hover, .t4 h2:hover {
     font-size: 2.2em;
-    
+
 }
 
 /*-----------FIND YOUR FIT STYLES--------*/
@@ -237,8 +237,8 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     opacity: 0;
     position: absolute;
-    left: 0; 
-    right: 0; 
+    left: 0;
+    right: 0;
     top: 15%;
     margin: auto;
     width: 50vw;
@@ -249,8 +249,8 @@ h1, h2, h3, h4, h5, h6 {
     min-width: 8%;
     background-color: #333;
     color: #fff;
-    padding: 4px 20px; 
-    line-break: auto;   
+    padding: 4px 20px;
+    line-break: auto;
     border: none;
     border-radius: 44px;
     cursor: pointer;
@@ -305,7 +305,7 @@ h1, h2, h3, h4, h5, h6 {
 .references_container ul {
     color: #fff;
     line-height: 1.5;
-    margin: 0.75em 2em;   
+    margin: 0.75em 2em;
 }
 
 /*------------FOOTER STYLES----------*/
@@ -370,7 +370,7 @@ footer input[type=submit] {
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-    
+
 }
 .social-link:hover {
     color: white;
@@ -403,18 +403,18 @@ footer input[type=submit] {
         position: relative;
         color: #fff;
     }
-    .header-nav { 
+    .header-nav {
         background-color: #444;
         box-sizing: border-box;
         left: 0;
-        max-height: 0; 
-        overflow: hidden; 
+        max-height: 0;
+        overflow: hidden;
         padding: 0;
         position: absolute;
         text-align: center;
-        top: 10vh; 
+        top: 10vh;
         transition: all 0.5s ease-in-out;
-        width: 100vw; 
+        width: 100vw;
         z-index: 9;
     }
     .header-nav li {
