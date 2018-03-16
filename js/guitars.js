@@ -1,5 +1,5 @@
-
 /*----------------ANIMATIONS----------------*/
+
 /*DROPDOWN ANIMATION/SCREEN CHECK*/
 $(document).ready(function () {
     $(".dropdown").hover(function () {
@@ -13,10 +13,10 @@ $(document).ready(function () {
 
 /*HOME PAGE ANIMATIONS*/
 
-
 //$(window).scroll(function() {
+
 if ($(window).width() > 800) {
-    if ( window.location.pathname == '{{ "/index.html" | relative_url }}' || window.location.pathname == '{{ "/" | relative_url }}'){
+    //if ( location.pathname == "/index.html" || location.pathname == "/"){
         $(".header").hide();
         var topofDiv = $(".hero-home").offset().top;
         var height = $(".hero-home").outerHeight();
@@ -35,7 +35,7 @@ if ($(window).width() > 800) {
 }
 
 /*Smooth Scroll*/
-if ( window.location.pathname == '{{ "/index.html" | relative_url }}' || window.location.pathname == '{{ "/" | relative_url }}'){
+//if ( window.location.pathname == "{{ "/index.html" | relative_url }}" || window.location.pathname == "./"){
     $("#scroller").click(function () {
         $("html, body").animate({
             scrollTop: 0

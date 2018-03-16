@@ -10,16 +10,10 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
 
-
+    <!--stylesheets-->
+    
     <link href="/css/reset.css" rel="stylesheet" type="text/css">
     <link href="/css/main.css"  rel="stylesheet" type="text/css">
-
-<!--
-    <link href="../css/reset.css" rel="stylesheet" type="text/css" />
-    <link href="../css/main.css" rel="stylesheet" type="text/css" />
--->
-    
-
 
 </head>
 
@@ -98,6 +92,7 @@
 
         <!--RESULTS-->
 
+      <div class="results">
         <div class="question result rElectric">
             <h3>You've been paired with the electric guitar!</h3>
             <p>The elecrtric guitar is friendly to both beginners and veterans alike. They can also be found at almost any price point. They're also one of the most iconic instruments in music today, making them the most versatile choice for any player. Fender and Epiphone make excellent guitars at most price points. A Gibson would be the best option when looking for a higher end model. If you want to learn more, check out the <a href="/references/electric.html">references</a> page for the electric guitar. </p>
@@ -115,6 +110,11 @@
             <h3>You've been paired with the Classical guitar!</h3>
             <p>Classical guitars are great for easy going players, and beginners alike. Classical guitars use nylon strings, which makes them easier on the hands especially when learning to play. They are also used in flamenco style music, which is a very advanced style of play. This makes them very versatile for most players. However, I would recommend you go to the store and pick up a classical before you make any purchase decision, they are definitely one of the more unique guitars of the bunch. They can usually be found between $300 - $1000. If you want to learn more, check out the <a href="/references/classical.html">references</a> page for the classical guitar. </p>
         </div>
+      </div>
+
+      <div class="map">
+        
+      </div>
 
     </form>
 </div>
@@ -122,9 +122,9 @@
     </div>
 
     <footer class="footer">
-       <a href="https://github.com/apatt96" class="social-link" target="_blank">
+      <!-- <a href="https://github.com/apatt96" class="social-link" target="_blank">
             <i class="fa fa-github" aria-hidden="true"></i>
-        </a>
+        </a>-->
         <form name="email_form" action="/action_page.php" onsubmit="return validateForm();" method="post">
             <h3>Be sure to sign up for the <span>newsletter:</span></h3>
             <input type="text" name="email" placeholder="youremail@mail.com">
@@ -144,15 +144,18 @@
                 return true;
             }
         }
-
     </script>
 </footer>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
-    <script src="/js/guitars.js"></script>
-    <script src="/js/findyourfit.js"></script>
-</body>
 
+    <script src="/js/guitars.js" type="text/javascript"></script>
+    <script src="/js/findyourfit.js" type="text/javascript"></script>
+
+
+    <!--Maps API
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC61avD7xRLpQ2c__mr2hKsgDqpD8UR9G0&libraries=places"></script>
+    -->
+</body>
 </html>

@@ -29,7 +29,7 @@ function showDivs(n) {
     }
     x[slideIndex - 1].style.display = "block";
     $(x[slideIndex - 1]).animate({opacity: '1'}, 700);
-    
+
 }
 
 /*QUESTIONS*/
@@ -127,7 +127,7 @@ function decision() {
         }
     }
     switch (largest) {
-        case 0: 
+        case 0:
             plusDivs(0);
             break;
         case 1:
