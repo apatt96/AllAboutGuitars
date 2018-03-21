@@ -1,0 +1,133 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "category": "Guitar store",
+        "hours": "10am - 9pm",
+        "name": "Guitar Center Alpharetta",
+        "phone": "+44 678 893 0870"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.284249,
+          34.050052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "category": "Guitar store",
+        "hours": "10am - 9pm",
+        "name": "Guitar Center Athens",
+        "phone": "+44 706 548 9354"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.455336,
+          33.916412
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "category": "Guitar store",
+        "hours": "10am - 9pm",
+        "name": "Guitar Center Atlanta",
+        "phone": "+44 404 320 7253"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.331443,
+          33.832875
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "category": "Guitar store",
+        "hours": "10am - 9pm",
+        "name": "Guitar Center Fayetteville",
+        "phone": "+44 770 719 2531"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.448641,
+          33.470872
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "category": "Guitar store",
+        "hours": "10am - 9pm",
+        "name": "Guitar Center Kennesaw",
+        "phone": "+44 678 932 0920"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.592137,
+          33.998268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "category": "Guitar store",
+        "hours": "10am - 9pm",
+        "name": "Guitar Center Lawrenceville",
+        "phone": "+44 678 380 6730"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.123280,
+          33.939848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "category": "Guitar store",
+        "hours": "10am - 9pm",
+        "name": "Guitar Center Macon",
+        "phone": "+44 478 471 3520"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -83.715362,
+          32.821886
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "category": "Guitar store",
+        "hours": "10am - 9pm",
+        "name": "Guitar Center Marietta",
+        "phone": "+44 770 980 9222"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -84.487103,
+          33.906298
+        ]
+      }
+    }
+  ]
+}

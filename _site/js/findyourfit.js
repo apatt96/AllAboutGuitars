@@ -90,8 +90,8 @@ function qFunction2() {
             acoustic++;
             hollowbody++;
             break;
-        case 5:
-            classical++;
+        case 4:
+            classical += 3;
             break;
     }
 }
@@ -140,4 +140,65 @@ function decision() {
             plusDivs(3);
             break;
     }
+    $("#map").fadeIn(700);
+    $(".results").show();
+    initMap();
+}
+
+/* For the map */
+
+var map;
+function initMap() {
+
+  var startPos;
+  var geoSuccess = function(position) {
+     startPos = position;
+     document.getElementById('startLat').innerHTML = startPos.coords.latitude;
+     document.getElementById('startLon').innerHTML = startPos.coords.longitude;
+   };
+
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+  var usrLat = document.getElementById('startLat').innerHTML;
+  var usrLon = document.getElementById('startLon').innerHTML;
+
+  var usrLoc = {lat: Number(usrLat), lng: Number(usrLon)};
+  const map = new google.maps.Map(document.getElementById('map'), {
+    center: usrLoc,
+    zoom: 9,
+    mapTypeId: 'roadmap',
+    mapTypeControlOptions: {style: google.maps.MapTypeControlStyle.DROPDOWN_MENU}
+  });
+
+  map.data.loadGeoJson('stores.json');
+  map.data.setStyle(feature => {
+    return {
+      icon: {
+        url: '/images/icons/pick.png',
+        scaledSize: new google.maps.Size(100, 64)
+      }
+    };
+  });
+
+  const apiKey = 'AIzaSyC61avD7xRLpQ2c__mr2hKsgDqpD8UR9G0&';
+  const infoWindow = new google.maps.InfoWindow({ "max-width":0.25 });
+  infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
+
+  map.data.addListener('click', event => {
+    const name = event.feature.getProperty('name');
+    const hours = event.feature.getProperty('hours');
+    const phone = event.feature.getProperty('phone');
+    const position = event.feature.getGeometry().get();
+    const content = `
+      <div style="margin: 1% 0; text-align: center; width: 250px;
+        height: 80px; position: relative;">
+        <h3 style="font-size: 18px; display: inline-block;">${name}</h3>
+        <p style="font-size: 12px; float: right; margin-left: 5%; position: absolute; top: 50%;"><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
+        <p><img style="width: 35%; margin-top:5%; float: right;" src="/images/GCLogo.jpg"></p>
+      </div>
+    `;
+
+    infoWindow.setContent(content);
+    infoWindow.setPosition(position);
+    infoWindow.open(map);
+  });
 }

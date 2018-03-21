@@ -237,34 +237,19 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
     opacity: 0;
     position: absolute;
+    height: auto;
     left: 0;
     right: 0;
     top: 15%;
     margin: auto;
-    width: 50vw;
+    width: 40%;
     font-size: 3em;
     text-align: center;
 }
-.question input[type=button], button[type=button] {
-    min-width: 8%;
-    background-color: #333;
-    color: #fff;
-    padding: 4px 20px;
-    line-break: auto;
-    border: none;
-    border-radius: 44px;
-    cursor: pointer;
-    opacity: 0.5;
-    font-size: 12px;
-    transition: opacity 0.5s;
-}
-.question input[type=button]:hover, button[type=button]:hover {
-    opacity: 0.8;
-}
 .question input[type=text], select {
     width: 50%;
-    padding: 16px 20px;
-    margin: 2em 0;
+    padding: 16px;
+    margin: 2em auto;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 20px;
@@ -275,11 +260,68 @@ h1, h2, h3, h4, h5, h6 {
 .question select option:hover {
     background-color: lightgrey;
 }
-.result p {
+.question input[type=button], button[type=button] {
+    min-width: 8%;
+    background-color: #333;
+    color: #fff;
+    padding: 4px 30px;
+    line-break: auto;
+    border: none;
+    border-radius: 44px;
+    cursor: pointer;
+    opacity: 0.5;
+    font-size: 12px;
+    transition: opacity 0.5s;
+    margin: 1px auto;
+
+}
+.question input[type=button]:hover, button[type=button]:hover {
+    opacity: 0.8;
+}
+.results {
+    display: inline-block;
+    text-align: center;
+    width: 40%;
+    position: relative;
+    height: 60vh;
+    float: left;
+    top: 15%;
+    margin: 0 5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.results > .question {
+    width: 100%;
+    top: 0;
+}
+.results h3 {
+    font-size: 0.7em;
+    width: 100%;
+    display: inline-block;
+    padding: 0.1em;
+    margin-bottom: 5px;
+}
+.results p {
     font-size: 12px;
     overflow-y: scroll;
-    width: 100%;
+    width: 85%;
+    margin: 5px auto;
 }
+
+/*----------MAPS API-----------*/
+
+#map {
+    background-color: #fff;
+    display: inline-block;
+    height: 40vh;
+    width: 40%;
+    color: #000;
+    float: right;
+    position: relative;
+    top: 25%;
+    margin: 0 5%;
+}
+
 /*------------REFERENCES STYLES---------*/
 
 .references_container {
@@ -376,12 +418,17 @@ footer input[type=submit] {
     color: white;
     transition: all 0.45s ease;
 }
+
 /*----------MEDIA QUERIES---------*/
 
 @media (max-width: 800px) {
     /*GENERAL*/
     h1 {
         font-size: 15vw;
+    }
+    p {
+      font-size: 0.75em;
+      line-height: 1.25em;
     }
     /*HEADER STYLES*/
     .header-nav {
@@ -462,16 +509,44 @@ footer input[type=submit] {
     /*FINDYOURFIT*/
     .question {
         font-size: 2em;
+        width: 70%;
+        overflow-y: hidden;
+        height: auto;
     }
     .question input[type=button], button[type=button] {
         min-width: 3em;
+        margin: auto;
     }
     .question input[type=text], select {
-        width: auto;
-        margin-left: ;
+        min-width: 75%;
     }
-    .result {
-        overflow-y: scroll;
-        height: 40vh;
+    .question h3 {
+      font-size: 1em;
+      padding-bottom: 0.5em;
     }
+    .results {
+      margin: auto;
+      top: 10%;
+      float: none;
+      display: block;
+      min-height: 50vh;
+      width: 80%;
+      overflow: auto;
+    }
+    .results p {
+      overflow-y: auto;
+    }
+    #map {
+      display: block;
+      float: none;
+      top: 10%;
+      width: 70%;
+      margin: 5vh auto;
+      height: 27vh;
+    }
+    /*Footer*/
+    footer h3{
+      font-size: 14px;
+    }
+
 }
