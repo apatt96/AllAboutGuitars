@@ -173,7 +173,7 @@ function initMap() {
   map.data.setStyle(feature => {
     return {
       icon: {
-        url: '/images/icons/pick.png',
+        url: "../images/icons/pick.png",
         scaledSize: new google.maps.Size(100, 64)
       }
     };
