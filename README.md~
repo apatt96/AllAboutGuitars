@@ -9,13 +9,13 @@ This is a sample website by Andrew Patterson. It demonstrates all of the functio
 - Cross-browser compatibility (Chrome, Safari)
 - Publishing through gh-pages
 - Google Maps API implementation
-- json file usage for object storage
+- JSON file usage for object storage
 
 Other site information:
-- all images saved in .jpg format
+- all images saved in .jpg format and are sourced from google
 - references pages sourced from Wikipedia
 - Several fonts imported from GoogleFonts
 
 For launching:
- - Can be launched locally using "jekyll serve"
+ - Can be launched locally by cloning the directory and  using "jekyll serve"
  - Can be accessed from the link:  "https://apatt96.github.io/AllAboutGuitars/index.html"

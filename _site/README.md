@@ -6,12 +6,12 @@ This is a sample website by Andrew Patterson. It demonstrates all of the functio
 - Form validation with javascript (email in footer)
 - Use of the Jekyll templating system
 - Improved accessibility (alt text for screen readers)
-- Cross-browser compatibility (Chrome, Safari)
 - Publishing through gh-pages
 - Google Maps API implementation
 - JSON file usage for object storage
 
 Other site information:
+- BEST WHEN USED IN CHROME
 - all images saved in .jpg format and are sourced from google
 - references pages sourced from Wikipedia
 - Several fonts imported from GoogleFonts

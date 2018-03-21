@@ -28,7 +28,7 @@ function showDivs(n) {
         x[i].style.display = "none";
     }
     x[slideIndex - 1].style.display = "block";
-    $(x[slideIndex - 1]).animate({opacity: '1'}, 700);
+    $(x[slideIndex - 1]).animate({opacity: '1'}, 400);
 
 }
 
