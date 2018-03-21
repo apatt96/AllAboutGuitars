@@ -140,6 +140,7 @@ function decision() {
             plusDivs(3);
             break;
     }
+
     $("#map").fadeIn(700);
     $(".results").show();
     initMap();
@@ -184,6 +185,7 @@ function initMap() {
   infoWindow.setOptions({pixelOffset: new google.maps.Size(0, -30)});
 
   map.data.addListener('click', event => {
+
     const name = event.feature.getProperty('name');
     const hours = event.feature.getProperty('hours');
     const phone = event.feature.getProperty('phone');
@@ -193,7 +195,7 @@ function initMap() {
         height: 80px; position: relative;">
         <h3 style="font-size: 18px; display: inline-block;">${name}</h3>
         <p style="font-size: 12px; float: right; margin-left: 5%; position: absolute; top: 50%;"><b>Open:</b> ${hours}<br/><b>Phone:</b> ${phone}</p>
-        <p><img style="width: 35%; margin-top:5%; float: right;" src="/images/GCLogo.jpg"></p>
+        <p><img style="width: 35%; margin-top:5%; float: right;" src="../images/GCLogo.jpg"></p>
       </div>
     `;
 

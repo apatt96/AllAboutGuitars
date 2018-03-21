@@ -9,6 +9,7 @@ This is a sample website by Andrew Patterson. It demonstrates all of the functio
 - Cross-browser compatibility (Chrome, Safari)
 - Publishing through gh-pages
 - Google Maps API implementation
+- json file usage for object storage
 
 Other site information:
 - all images saved in .jpg format

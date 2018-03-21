@@ -1,23 +1,19 @@
 /*----------------ANIMATIONS----------------*/
 
-
-$("#map").hide();
-$(".results").hide();
-
-/*HOME PAGE ANIMATIONS*/
-
 /*Header Fade*/
 if ($(window).width() > 800) {
-    if ( location.pathname == "/index.html" || location.pathname == "/"){
+    if ( location.pathname == "/index.html" || location.pathname == "/AllAboutGuitars/index.html"){
         $(".header").hide();
         var topofDiv = $(".hero-home").offset().top;
         var height = $(".hero-home").outerHeight();
         $(window).scroll(function(){
             if($(window).scrollTop() > (topofDiv + height)){
                $(".header").fadeIn(250);
+               $(".full-home").css('background', 'rgba(0, 0, 0, 0.3)');
             }
             else{
-               $(".header").hide();
+               $(".header").fadeOut(250);
+               $(".full-home").css('background', 'rgba(0, 0, 0, 0)');
             }
         });
     }
