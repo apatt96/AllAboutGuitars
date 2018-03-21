@@ -7,7 +7,7 @@ if ($(window).width() > 800) {
         var topofDiv = $(".hero-home").offset().top;
         var height = $(".hero-home").outerHeight();
         $(window).scroll(function(){
-            if($(window).scrollTop() > (topofDiv + height)){
+            if($(window).scrollTop() > (topofDiv + height - 10)){
                $(".header").fadeIn(250);
                $(".full-home").css('background', 'rgba(0, 0, 0, 0.3)');
             }
