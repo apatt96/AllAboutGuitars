@@ -152,12 +152,6 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     transform: translate(-50%, 0);
 }
-.hero-home {
-  /*
-    background-image: url("../images/FULLHERO.jpg");
-    background-size: cover;
-    background-position: center-top;*/
-}
 .hero-content {
     color: #fff;
     position: relative;
@@ -408,11 +402,11 @@ footer input[type=submit] {
     border-radius: 4px;
     cursor: pointer;
     transition: opacity 0.5s;
-
 }
+/*
 .social-link {
     background: black;
-    border-radius: 99px; /*to create circle*/
+    border-radius: 99px;
     box-sizing: border-box;
     color: lightgrey;
     display: inline-block;
@@ -423,12 +417,12 @@ footer input[type=submit] {
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
-
 }
 .social-link:hover {
     color: white;
     transition: all 0.45s ease;
 }
+*/
 
 /*----------MEDIA QUERIES---------*/
 
@@ -523,6 +517,7 @@ footer input[type=submit] {
         width: 70%;
         overflow-y: hidden;
         height: auto;
+        z-index: 2;
     }
     .question input[type=button], button[type=button] {
         min-width: 3em;
@@ -556,8 +551,7 @@ footer input[type=submit] {
       height: 27vh;
     }
     /*Footer*/
-    footer h3{
+    footer h3 {
       font-size: 14px;
     }
-
 }
