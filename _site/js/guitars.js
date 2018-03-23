@@ -3,7 +3,7 @@
 $("#map").hide();
 /*Header Fade*/
 if ($(window).width() > 800) {
-    if ( location.pathname == "/index.html" || location.pathname == "/AllAboutGuitars/index.html" || location.pathname == "/AllAboutGuitars/" location.pathname == "/" ){
+    if ( location.pathname == "/index.html" || location.pathname == "/AllAboutGuitars/index.html" || location.pathname == "/AllAboutGuitars/" || location.pathname == "/" ){
         $(".header").hide();
         var topofDiv = $(".hero-home").offset().top;
         var height = $(".hero-home").outerHeight();
