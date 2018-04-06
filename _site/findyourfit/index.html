@@ -123,6 +123,9 @@
       <div id="map">
       </div>
     </form>
+
+    <input id="pac-input" class="controls" type="text" value="guitar center near me" placeholder="Search Box" style="visibility: hidden">
+
     <div id="startLat" style="visibility: hidden;"></div>
     <div id="startLon" style="visibility: hidden;"></div>
     <select id="locationSelect" style="visibility: hidden"></select>
@@ -164,8 +167,9 @@
 
 
     <!--Maps API-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC61avD7xRLpQ2c__mr2hKsgDqpD8UR9G0&callback=initMap"
-    async defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC61avD7xRLpQ2c__mr2hKsgDqpD8UR9G0&libraries=places&callback=initAutocomplete" async defer></script>
+
+
 
 </body>
 </html>
