@@ -168,17 +168,22 @@ function decision() {
 
 function initAutocomplete() {
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: usrLoc,
-  //  center: {lat: 33.916412, lng: -83.455336},
-    zoom: 10,
-    mapTypeId: 'roadmap'
+    //center: usrLoc,
+    center: {lat: 33.916412, lng: -84.386330},
+    zoom: 10
+    //mapTypeId: 'roadmap'
   });
 
   // Create the search box and link it to the UI element.
-  var inputString = "Guitar Center near me";
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+  document.getElementsByClassName('rElectric').onmouseover = function () {
+      map.event.trigger(input, 'focus')
+      map.event.trigger(input, 'keydown', { keyCode: 13 });
+  };
+
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
@@ -208,13 +213,10 @@ function initAutocomplete() {
         console.log("Returned place contains no geometry");
         return;
       }
-      var icon = {
-        url: place.icon,
-        size: new google.maps.Size(71, 71),
-        origin: new google.maps.Point(0, 0),
-        anchor: new google.maps.Point(17, 34),
-        scaledSize: new google.maps.Size(25, 25)
-      };
+    var icon = {
+        url: "../images/icons/pick.png",
+        scaledSize: new google.maps.Size(100, 64)
+    };
 
       // Create a marker for each place.
       markers.push(new google.maps.Marker({
