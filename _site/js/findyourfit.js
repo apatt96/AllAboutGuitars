@@ -155,32 +155,40 @@ function initAutocomplete() {
     initialSearch.focus();
   }
 
-  function getLocation() {
+  function getLocation(){
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-        x.innerHTML = "Geolocation is not supported by this browser.";
-    }
+          navigator.geolocation.getCurrentPosition(function(position) {
+            var pos = {
+              lat: position.coords.latitude,
+              lng: position.coords.longitude
+            };
+            alert("location Found");
+            map.setCenter(pos);
+          }, function() {
+            handleLocationError(true, infoWindow, map.getCenter());
+          });
+        }
+    else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
   }
-
-  function showPosition(position) {
-      var usrLoc = {lat: position.coords.latitude, lng: position.coords.longitude};
-      alert(usrLoc);
-  }
-
-  getLocation();
-  alert(usrLoc);
 
   var map = new google.maps.Map(document.getElementById('map'), {
-    center: usrLoc,
-  //  center: {lat: 33.916412, lng: -84.386330},
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    center: {lat: 33.916412, lng: -84.386330},
     zoom: 10
   });
+
+
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+
+  getLocation();
+
   setTimeout(defaultInput, 1000);
 
   // Bias the SearchBox results towards current map's viewport.
