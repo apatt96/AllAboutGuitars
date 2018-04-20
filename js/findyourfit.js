@@ -4,25 +4,7 @@ var hollowbody = 0;
 var classical = 0;
 var slideIndex = 1;
 
-window.onload = function() {
-  var startPos;
-  var usrLat;
-  var usrLon;
-  var geoSuccess = function(position) {
-    startPos = position;
-    document.getElementById('startLat').innerHTML = startPos.coords.latitude;
-    document.getElementById('startLon').innerHTML = startPos.coords.longitude;
-  };
-
-  var usrLat = document.getElementById('startLat');
-  var usrLon = document.getElementById('startLat');
-  var userLoc = navigator.geolocation.getCurrentPosition(geoSuccess);
-
-  var usrLoc = {lat: Number(usrLat), lng: Number(usrLon)};
-  alert(usrLoc);
-  showDivs(slideIndex);
-};
-
+showDivs(slideIndex);
 
 /*SLIDESHOW*/
 
@@ -173,13 +155,25 @@ function initAutocomplete() {
     initialSearch.focus();
   }
 
-  if(usrLoc === undefined){
-    usrLoc = {lat: 33.916412, lng: -84.386330};
+  function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
   }
+
+  function showPosition(position) {
+      var usrLoc = {lat: position.coords.latitude, lng: position.coords.longitude};
+      alert(usrLoc);
+  }
+
+  getLocation();
+  alert(usrLoc);
 
   var map = new google.maps.Map(document.getElementById('map'), {
     center: usrLoc,
-    //center: {lat: 33.916412, lng: -84.386330},
+  //  center: {lat: 33.916412, lng: -84.386330},
     zoom: 10
   });
 
