@@ -1,3 +1,9 @@
+var electric = 0;
+var acoustic = 0;
+var hollowbody = 0;
+var classical = 0;
+var slideIndex = 1;
+
 window.onload = function() {
   var startPos;
   var usrLat;
@@ -13,15 +19,10 @@ window.onload = function() {
   var usrLoc = navigator.geolocation.getCurrentPosition(geoSuccess);
 
   var usrLoc = {lat: Number(usrLat), lng: Number(usrLon)};
+
+  showDivs(slideIndex);
 };
 
-var electric = 0;
-var acoustic = 0;
-var hollowbody = 0;
-var classical = 0;
-
-var slideIndex = 1;
-showDivs(slideIndex);
 
 /*SLIDESHOW*/
 
@@ -46,7 +47,6 @@ function showDivs(n) {
     }
     x[slideIndex - 1].style.display = "block";
     $(x[slideIndex - 1]).animate({opacity: '1'}, 400);
-
 }
 
 /*QUESTIONS*/
@@ -132,7 +132,6 @@ function qFunction3() {
             acoustic++;
             break;
     }
-
     decision();
 }
 
@@ -162,11 +161,18 @@ function decision() {
     $("#map").fadeIn(700);
     $(".results").show();
     initAutocomplete();
+
 }
 
 /*FOR THE MAP*/
 
 function initAutocomplete() {
+
+  function defaultInput() {
+    var initialSearch = document.getElementById('pac-input');
+    initialSearch.focus();
+  }
+
   var map = new google.maps.Map(document.getElementById('map'), {
     //center: usrLoc,
     center: {lat: 33.916412, lng: -84.386330},
@@ -178,14 +184,6 @@ function initAutocomplete() {
   var searchBox = new google.maps.places.SearchBox(input);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
   setTimeout(defaultInput, 1000);
-
-
-  function defaultInput() {
-    document.getElementById('pac-input').style.opacity = "0";
-    var initialSearch = document.getElementById('pac-input');
-    initialSearch.focus();
-    
-  }
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
@@ -239,8 +237,6 @@ function initAutocomplete() {
     map.fitBounds(bounds);
   });
 }
-
-
 
 
 /* For the map */
