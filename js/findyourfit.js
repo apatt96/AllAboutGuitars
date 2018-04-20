@@ -181,23 +181,11 @@ function initAutocomplete() {
 
 
   function defaultInput() {
+    document.getElementById('pac-input').style.opacity = "0";
     var initialSearch = document.getElementById('pac-input');
     initialSearch.focus();
-
-    var e = new Event("keydown");
-    e.key="a";    // just enter the char you want to send
-    e.keyCode=e.key.charCodeAt(0);
-    e.which=e.keyCode;
-    e.altKey=false;
-    e.ctrlKey=true;
-    e.shiftKey=false;
-    e.metaKey=false;
-    e.bubbles=true;
-    document.dispatchEvent(e);
-
+    
   }
-
-
 
   // Bias the SearchBox results towards current map's viewport.
   map.addListener('bounds_changed', function() {
