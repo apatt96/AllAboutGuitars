@@ -16,10 +16,10 @@ window.onload = function() {
 
   var usrLat = document.getElementById('startLat');
   var usrLon = document.getElementById('startLat');
-  var usrLoc = navigator.geolocation.getCurrentPosition(geoSuccess);
+  var userLoc = navigator.geolocation.getCurrentPosition(geoSuccess);
 
   var usrLoc = {lat: Number(usrLat), lng: Number(usrLon)};
-
+  alert(usrLoc);
   showDivs(slideIndex);
 };
 
@@ -173,9 +173,13 @@ function initAutocomplete() {
     initialSearch.focus();
   }
 
+  if(usrLoc === undefined){
+    usrLoc = {lat: 33.916412, lng: -84.386330};
+  }
+
   var map = new google.maps.Map(document.getElementById('map'), {
-    //center: usrLoc,
-    center: {lat: 33.916412, lng: -84.386330},
+    center: usrLoc,
+    //center: {lat: 33.916412, lng: -84.386330},
     zoom: 10
   });
 
