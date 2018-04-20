@@ -171,18 +171,32 @@ function initAutocomplete() {
     //center: usrLoc,
     center: {lat: 33.916412, lng: -84.386330},
     zoom: 10
-    //mapTypeId: 'roadmap'
   });
 
   // Create the search box and link it to the UI element.
   var input = document.getElementById('pac-input');
   var searchBox = new google.maps.places.SearchBox(input);
   map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+  setTimeout(defaultInput, 1000);
 
-  document.getElementsByClassName('rElectric').onmouseover = function () {
-      map.event.trigger(input, 'focus')
-      map.event.trigger(input, 'keydown', { keyCode: 13 });
-  };
+
+  function defaultInput() {
+    var initialSearch = document.getElementById('pac-input');
+    initialSearch.focus();
+
+    var e = new Event("keydown");
+    e.key="a";    // just enter the char you want to send
+    e.keyCode=e.key.charCodeAt(0);
+    e.which=e.keyCode;
+    e.altKey=false;
+    e.ctrlKey=true;
+    e.shiftKey=false;
+    e.metaKey=false;
+    e.bubbles=true;
+    document.dispatchEvent(e);
+
+  }
+
 
 
   // Bias the SearchBox results towards current map's viewport.
@@ -205,6 +219,7 @@ function initAutocomplete() {
       marker.setMap(null);
     });
     markers = [];
+
 
     // For each place, get the icon, name and location.
     var bounds = new google.maps.LatLngBounds();
@@ -236,6 +251,8 @@ function initAutocomplete() {
     map.fitBounds(bounds);
   });
 }
+
+
 
 
 /* For the map */
