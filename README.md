@@ -18,4 +18,4 @@ Other site information:
 
 For launching:
  - Can be launched locally by cloning the directory and  using "jekyll serve"
- - Can be accessed from the link:  "https://apatt96.github.io/AllAboutGuitars/index.html"
+ - Can be accessed from the link:  ""
